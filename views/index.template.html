@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= _TITLE %></title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="48x48" href="logo-48.png">
+    <% _CSS.forEach(function(css) { %>
+    <link rel="stylesheet" href="<%= css %>" charset="utf-8">
+    <% }); %>
+  </head>
+  <body>
+    <!-- APP -->
+    <script type="text/javascript" src="require-min.js"></script>
+    <script>
+      <% var baseUrl = _ENV !== "production" ? "scripts" : "js"; %>
+      require.config({ baseUrl: "<%= baseUrl %>" });
+    </script>
+    <% _JS.forEach(function(js) { %>
+      <script type="text/javascript" src="<%= js %>"></script>
+    <% }); %>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "socs",
+  "version": "1.0.0",
+  "description": "simple,open,creative,seek",
+  "author": "郑昌隆 <eeplover@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development node --harmony app.js",
+    "start": "gulp && node --harmony app.js"
+  },
+  "dependencies": {
+    "koa": "^2.0.0-alpha.7",
+    "koa-favicon": "^2.0.0",
+    "koa-static": "^3.0.0",
+    "less": "^2.7.2",
+    "lru-cache": "^4.0.2",
+    "node-fetch": "^1.6.3",
+    "ua-parser-js": "^0.7.12",
+    "vue": "^2.1.8",
+    "vue-server-renderer": "^2.1.10"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cached": "^1.1.0",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-less": "^3.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-requirejs-optimize": "^1.2.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-strip-comments": "^2.4.3",
+    "gulp-uglify": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "repository": "https://github.com/eplover/socs.git"
+  }
+}
