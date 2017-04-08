@@ -13,17 +13,20 @@ class Controller {
     if (this.ctx.query.showmedata == 1)
       return this.ctx.body = data
     const tmplStr = this.getTmplStr(path)
-    if (config.NODE_ENV === 'production' && config.MANIFEST) {
+    if (config.CSS_MANIFEST) {
       data._CSS = data._CSS.map(item => {
-        return 'css/' + config.MANIFEST[`page/${item}.css`]
-      })
-      data._JS = data._JS.map(item => {
-        return 'js/' + config.MANIFEST[`page/${item}.js`]
+        return 'css/' + config.CSS_MANIFEST[`page/${item}.css`]
       })
     } else {
       data._CSS = data._CSS.map(item => {
         return `styles/page/${item}.less`
       })
+    }
+    if (config.JS_MANIFEST) {
+      data._JS = data._JS.map(item => {
+        return 'js/' + config.JS_MANIFEST[`page/${item}.js`]
+      })
+    } else {
       data._JS = data._JS.map(item => {
         return `scripts/page/${item}.js`
       })

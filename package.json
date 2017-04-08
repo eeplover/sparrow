@@ -1,12 +1,13 @@
 {
-  "name": "socs",
+  "name": "sparrow",
   "version": "1.0.0",
   "description": "simple,open,creative,seek",
   "author": "郑昌隆 <eeplover@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development node --harmony app.js",
-    "start": "gulp && node --harmony app.js"
+    "dev": "node --harmony app.js",
+    "start": "NODE_ENV=production node --harmony app.js",
+    "build": "gulp"
   },
   "dependencies": {
     "koa": "^2.0.0-alpha.7",
@@ -25,17 +26,17 @@
     "gulp-autoprefixer": "^2.3.1",
     "gulp-cached": "^1.1.0",
     "gulp-clean-css": "^3.0.3",
-    "gulp-imagemin": "^3.0.3",
     "gulp-less": "^3.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-requirejs-optimize": "^1.2.0",
     "gulp-rev": "^7.1.2",
+    "gulp-sourcemaps": "^2.5.1",
     "gulp-strip-comments": "^2.4.3",
     "gulp-uglify": "^2.0.0"
   },
   "repository": {
     "type": "git",
-    "repository": "https://github.com/eplover/socs.git"
+    "repository": "https://github.com/eplover/sparrow.git"
   }
 }
